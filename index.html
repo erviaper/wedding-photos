@@ -12,14 +12,23 @@
 
     <v-app id="app" v-cloak>
       <v-card>
-        <div>{{ myName }}</div>
-        <v-btn color="primary" depressed block @click="updateMyName()">
+        <div>
+          {{ myName }}
+        </div>
+        <div>
           <v-file-input label="File input"></v-file-input>
+        </div>
+        <div>
           <v-text-field label="Your comment"></v-text-field>
+        </div>
+        <div>
+          <v-btn class="ml-2" color="primary" height="40" depressed :disabled="!selectedDiscount" @click="updateMyName()">
+              Post now!
+          </v-btn>
+        </div>
       </v-card>
     </v-app>
       
-    
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.6.14/dist/vuetify.min.js"></script>
     <script src="js/main.js"></script>
